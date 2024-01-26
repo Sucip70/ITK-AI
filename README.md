@@ -1,148 +1,64 @@
-![Screenshots](screenshots/Minimal%20Home.png)
-# [Flutter Minimal Website](https://gallery.codelessly.com/flutterwebsites/minimal/)
-[![Flutter Responsive](https://img.shields.io/badge/flutter-responsive-brightgreen.svg?style=flat-square)](https://github.com/Codelessly/ResponsiveFramework) [![GitHub release](https://img.shields.io/github/release/Codelessly/FlutterMinimalWebsite.svg?style=flat-square)](https://github.com/Codelessly/FlutterMinimalWebsite/releases) [![GitHub Release Date](https://img.shields.io/github/release-date/Codelessly/FlutterMinimalWebsite.svg?style=flat-square)](https://github.com/Codelessly/FlutterMinimalWebsite/releases) [![GitHub issues](https://img.shields.io/github/issues/Codelessly/FlutterMinimalWebsite.svg?style=flat-square)](https://github.com/Codelessly/FlutterMinimalWebsite/issues) [![GitHub top language](https://img.shields.io/github/languages/top/Codelessly/FlutterMinimalWebsite.svg?style=flat-square)](https://github.com/Codelessly/FlutterMinimalWebsite) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Codelessly/FlutterMinimalWebsite.svg?style=flat-square)](https://github.com/Codelessly/FlutterMinimalWebsite) [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/Codelessly/FlutterMinimalWebsite.svg?style=flat-square)](https://libraries.io/github/Codelessly/FlutterMinimalWebsite) [![License](https://img.shields.io/badge/License-BSD%200--Clause-orange.svg?style=flat-square)](https://opensource.org/licenses/0BSD)
 
-<img src="assets/Minimal-Logo-iOS.png" width="128">
+<img src="https://firebase.google.com/static/docs/cloud-messaging/images/diagram-FCM.png"/>
 
-> ### A minimalistic website for blogs and portfolios built with Flutter.
+# Installation
 
-[View Flutter Minimal Website](https://gallery.codelessly.com/flutterwebsites/minimal/)
+## Postman
+Click [here](https://www.bing.com/ck/a?!&&p=6fb8e51bfd5c010eJmltdHM9MTcwNjE0MDgwMCZpZ3VpZD0yMjM5NWU2OC0zZTFjLTY3YjgtMDQ4MC00YTZjM2Y0YTY2NTEmaW5zaWQ9NTQ5OA&ptn=3&ver=2&hsh=3&fclid=22395e68-3e1c-67b8-0480-4a6c3f4a6651&psq=postman&u=a1aHR0cHM6Ly93d3cucG9zdG1hbi5jb20vZG93bmxvYWRzLw&ntb=1) to download and install postman
 
-[CanvasKit Renderer Version](https://gallery.codelessly.com/flutterwebsites/minimal-canvas/)
+## Flutter
+Flutter is Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop from a single codebase. Flutter works with existing code, is used by developers and organizations around the world, and is free and open source.
 
-[HTML Renderer Version](https://gallery.codelessly.com/flutterwebsites/minimal-html/)
-
-## Screenshots
-
-|List|Post| 
-|--|--|
-|![Screenshots](screenshots/Minimal%20List.png)|![Screenshots](screenshots/Minimal%20Post.png)|
-
-## About
-
-This minimalistic website template was built as a demo for the [Flutter Responsive Framework](https://github.com/Codelessly/ResponsiveFramework) and to showcase the current state of Flutter Web. 
-
-Flutter Minimal Website is licensed under Zero-Clause BSD and released as Emailware. If you like this project or it helped you, please leave your email for updates. Although it is not required, I'd very much appreciate it!
-
-<a href="https://gallery.codelessly.com/flutterwebsites/minimal/newsletter/" target="_blank"><img src="screenshots/Email%20Newsletter%20Signup.png"></a>
+- [Flutter Installation](https://docs.flutter.dev/get-started/install)
+- [Documentation](https://docs.flutter.dev/)
 
 
-## Features
 
-- [x] List Page
-    - [X] List Items
-    - [X] Pagination UI
-    - [X] Continue reading button
-    - [ ] Pagination generative routing
-    - [ ] Infinite scroll
-    - [ ] Blurb/ellipsize algorithm
-    - [ ] Sidebar
-    - [ ] Latest posts feature
-    - [ ] Social links
-    - [ ] Grid layout
-- [x] Post Page
-    - [X] Simple typography
-    - [X] Fixed height image
-    - [X] Tags
-    - [X] Author box
-    - [X] Pagination UI
-    - [ ] Advanced typography
-    - [ ] Inline image
-    - [ ] Image caption
-    - [ ] "Listen to post" audio player
-    - [ ] Social sharing
-    - [ ] Sidebar
-    - [ ] Automatic next post
-    - [ ] Recommended posts
-- [ ] Portfolio
-    - [ ] Image gallery
-    - [ ] Sort by tags
-    - [ ] Animated sort
-    - [ ] Image overlay
-    - [ ] Lightbox
-- [ ] About/Contact
-    - [ ] About us UI
-    - [ ] Social links
-    - [ ] Location map
-    - [ ] Contact form
-- [ ] Hero UI
-    - [ ] Hero slider
-    - [ ] Hero banner
-    - [ ] Hero fullscreen
-- [ ] Components
-    - [ ] Syntax/Code highlighter
-    - [ ] Dropdown menu
-    - [ ] Hamburger menu
-    - [ ] Charts
-    - [ ] Data table
-    - [ ] Popup
-    - [ ] Newsletter box
-- [ ] Pages
-    - [ ] 404
-    - [ ] Sitemap
-    - [ ] Search
+## API Reference
 
-  
-## Contributors ❤️
+#### Get all items
 
-Minimal Template is a good start but there are still a lot of features to develop. Let's work together to expand the capabilities of Flutter Web! You can help by:
+```http
+  POST https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/chat/completions?api-version={{api_version}}&api-key={{api_key}}
+```
 
-- Recommending "web ready" Flutter components to add to this project.
-- Developing "web ready" components (and letting me know!) 💕
-- Fork this project and build on top of it. 
-- Give me advice! 
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api-key` | `string` | **Required**. Your API key |
+| `api-version` | `string` | **Required**. Your API version |
+| `resource_name` | `string` | **Required**. Your resource name in azure |
+| `deployment_name` | `string` | **Required**. deployment name such as gpt model |
 
-Please feel free to open an issue or reach out through one of the channel below. If you are thinking about contributing to this template, do not hesitate! There are no formal pull request requirements and I will work with you to get your contributions added.
-
-**Design:** 
-* [Ray Li](https://github.com/searchy2)
-
-**Development:** 
-* [Ray Li](https://github.com/searchy2)
-* *add yourself here by contributing*
-
-**Sponsor:** [Codelessly - No Code Automation Tools](https://codelessly.com)
-
-<a href="mailto:ray@codelessly.com">
-  <img alt="Codelessly Email"
-       src="https://lh3.googleusercontent.com/yN_m90WN_HSCohXdgC2k91uSTk9dnYfoxTYwG_mv_l5_05dV2CzkQ1B6rEqH4uqdgjA=w96" />
-</a>
-<a href="https://codelessly.com">
-  <img alt="Codelessly Website"
-       src="https://lh3.googleusercontent.com/YmMGcgeO7Km9-J9vFRByov5sb7OUKetnKs8pTi0JZMDj3GVJ61GMTcTlHB7u9uHDHag=w96" />
-</a>
-<a href="https://twitter.com/BuildCodelessly">
-  <img alt="Codelessly Twitter"
-       src="https://lh3.ggpht.com/lSLM0xhCA1RZOwaQcjhlwmsvaIQYaP3c5qbDKCgLALhydrgExnaSKZdGa8S3YtRuVA=w96" />
-</a>
-<a href="https://github.com/Codelessly">
-  <img alt="Codelessly GitHub"
-       src="https://lh3.googleusercontent.com/L15QqmKK7Vl-Ag1ZxaBqNQlXVEw58JT2BDb-ef5t2eboDh0pPSLjDgi3-aQ3Opdhhyk=w96" />
-</a>
-<br></br>
-<a href="https://github.com/Codelessly/ResponsiveFramework">
-  <img alt="Built with Responsive Framework"
-       src="screenshots/Built%20with%20Responsive%20Badge.png" />
-</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/flutter/flutter">
-  <img alt="Flutter"
-       src="screenshots/Flutter%20Logo%20Banner.png" />
-</a>
+### body
+```bash
+{
+    "message": [
+        {
+            "role": "system",
+            "content": "You are a helpful assistant."
+        },
+        {
+            "role": "user",
+            "content": "What is the color of apple?"
+        }
+    ],
+    "max_tokens": 0,
+    "temperature": 1,
+    "top_p": 1,
+    "stop": null,
+    "presence_penalty": 0,
+    "frequency_penalty": 0
+}
+```
+## Setup
+Go to file lib/models/ai_chat.dart
+replace {{YOUR_OPEN_AI_ENDPOINT+API_KEY}}" with your endpoint that was created on Azure Portal
 
 
-## License
+## Demo
 
-    BSD Zero Clause License
+Type to your terminal:
 
-    Copyright © 2023 Codelessly
-
-    Permission to use, copy, modify, and/or distribute this software for any
-    purpose with or without fee is hereby granted.
-
-    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-    PERFORMANCE OF THIS SOFTWARE.
+```
+Flutter run
+```
