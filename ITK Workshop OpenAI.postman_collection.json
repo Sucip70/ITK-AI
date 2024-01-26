@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "1a461361-20c4-441f-bfdc-3c03e01067c2",
+		"name": "ITK Workshop OpenAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29773357"
+	},
+	"item": [
+		{
+			"name": "Completions",
+			"item": [
+				{
+					"name": "Completion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"prompt\": \"Ada udang dibalik\",\r\n  \"max_tokens\": 5,\r\n  \"temperature\": 1,\r\n  \"top_p\": 1,\r\n//  \"user\": \"\",\r\n//  \"n\": 1,\r\n  \"stop\": null,\r\n//  \"suffix\": \"\",\r\n  \"presence_penalty\": 0,\r\n  \"frequency_penalty\": 0,\r\n//  \"best_of\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat Completion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": [\r\n        {\r\n            \"role\": \"system\",\r\n            \"content\": \"You are a helpful assistant.\"\r\n        },\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": \"Does Azure OpenAI support customer managed keys?\"\r\n        },\r\n        {\r\n            \"role\": \"assistant\",\r\n            \"content\": \"Yes, customer managed keys are supported by Azure OpenAI.\"\r\n        },\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": \"Do other Azure AI services support this too?\"\r\n        }\r\n    ]\r\n    //  \"contentPart\": {},\r\n    //  \"contentPartImage\": {},\r\n    //  \"enhanchments\": {},\r\n    //  \"dataSources\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat Completion 2",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": [\r\n        {\r\n            \"role\": \"system\",\r\n            \"content\": \"You are a helpful assistant.\"\r\n        },\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": \"What is the color of apple?\"\r\n        }\r\n    ],\r\n    \"max_tokens\": 0,\r\n    \"temperature\": 1,\r\n    \"top_p\": 1,\r\n    \"stop\": null,\r\n    \"presence_penalty\": 0,\r\n    \"frequency_penalty\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Datasource",
+			"item": [
+				{
+					"name": "Azure AI Search",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"temperature\": 0,\r\n    \"max_tokens\": 1000,\r\n    \"top_p\": 1.0,\r\n    \"dataSources\": [\r\n        {\r\n            \"type\": \"AzureCognitiveSearch\",\r\n            \"parameters\": {\r\n                \"endpoint\": \"YOUR_AZURE_COGNITIVE_SEARCH_ENDPOINT\",\r\n                \"key\": \"YOUR_AZURE_COGNITIVE_SEARCH_KEY\",\r\n                \"indexName\": \"YOUR_AZURE_COGNITIVE_SEARCH_INDEX_NAME\"\r\n            }\r\n        }\r\n    ],\r\n    \"messages\": [\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": \"What are the differences between Azure Machine Learning and Azure AI services?\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/extension/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"extension",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Azure Cosmos DB",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"temperature\": 0,\r\n    \"top_p\": 1.0,\r\n    \"max_tokens\": 800,\r\n    \"stream\": false,\r\n    \"messages\": [\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": \"What is the company insurance plan?\"\r\n        }\r\n    ],\r\n    \"dataSources\": [\r\n        {\r\n            \"type\": \"AzureCosmosDB\",\r\n            \"parameters\": {\r\n                \"authentication\": {\r\n                    \"type\": \"ConnectionString\",\r\n                    \"connectionString\": \"mongodb+srv://onyourdatatest:{password}$@{cluster-name}.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000\"\r\n                },\r\n                \"databaseName\": \"vectordb\",\r\n                \"containerName\": \"azuredocs\",\r\n                \"indexName\": \"azuredocindex\",\r\n                \"embeddingDependency\": {\r\n                    \"type\": \"DeploymentName\",\r\n                    \"deploymentName\": \"{embedding deployment name}\"\r\n                },\r\n                \"fieldsMapping\": {\r\n                    \"vectorFields\": [\r\n                        \"contentvector\"\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/extension/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"extension",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Elasticsearch",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"messages\": [\r\n    {\r\n      \"role\": \"system\",\r\n      \"content\": \"you are a helpful assistant that talks like a pirate\"\r\n    },\r\n    {\r\n      \"role\": \"user\",\r\n      \"content\": \"can you tell me how to care for a parrot?\"\r\n    }\r\n  ],\r\n  \"dataSources\": [\r\n    {\r\n      \"type\": \"Elasticsearch\",\r\n      \"parameters\": {\r\n        \"endpoint\": \"{search endpoint}\",\r\n        \"indexName\": \"{index name}\",\r\n        \"authentication\": {\r\n          \"type\": \"KeyAndKeyId\",\r\n          \"key\": \"{key}\",\r\n          \"keyId\": \"{key id}\"\r\n        }\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/extension/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"extension",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Azure Machine Learning",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"messages\": [\r\n    {\r\n      \"role\": \"system\",\r\n      \"content\": \"you are a helpful assistant that talks like a pirate\"\r\n    },\r\n    {\r\n      \"role\": \"user\",\r\n      \"content\": \"can you tell me how to care for a parrot?\"\r\n    }\r\n  ],\r\n  \"dataSources\": [\r\n    {\r\n      \"type\": \"AzureMLIndex\",\r\n      \"parameters\": {\r\n        \"projectResourceId\": \"/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.MachineLearningServices/workspaces/{workspace-id}\",\r\n        \"name\": \"my-project\",\r\n        \"version\": \"5\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/extension/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"extension",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pinecone",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"messages\": [\r\n    {\r\n      \"role\": \"system\",\r\n      \"content\": \"you are a helpful assistant that talks like a pirate\"\r\n    },\r\n    {\r\n      \"role\": \"user\",\r\n      \"content\": \"can you tell me how to care for a parrot?\"\r\n    }\r\n  ],\r\n  \"dataSources\": [\r\n    {\r\n      \"type\": \"Pinecone\",\r\n      \"parameters\": {\r\n        \"authentication\": {\r\n          \"type\": \"APIKey\",\r\n          \"apiKey\": \"{api key}\"\r\n        },\r\n        \"environment\": \"{environment name}\",\r\n        \"indexName\": \"{index name}\",\r\n        \"embeddingDependency\": {\r\n          \"type\": \"DeploymentName\",\r\n          \"deploymentName\": \"{embedding deployment name}\"\r\n        },\r\n        \"fieldsMapping\": {\r\n          \"titleField\": \"title\",\r\n          \"urlField\": \"url\",\r\n          \"filepathField\": \"filepath\",\r\n          \"contentFields\": [\r\n            \"content\"\r\n          ],\r\n          \"contentFieldsSeparator\": \"\\n\"\r\n        }\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/extension/chat/completions?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"extension",
+								"chat",
+								"completions"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dall-E",
+			"item": [
+				{
+					"name": "Generate Image Dall-E 3",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "ea048376d7cf4267b0b0ad415d81a9f4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\": \"An avocado chair\",\r\n    \"size\": \"1024x1024\",\r\n    \"n\": 3,\r\n    \"quality\": \"hd\", \r\n    \"style\": \"vivid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/deployments/{{deployment_name}}/images/generations?api-version={{api_version}} ",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"deployments",
+								"{{deployment_name}}",
+								"images",
+								"generations"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}} "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Image Dall-E 2",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{your_api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "ea048376d7cf4267b0b0ad415d81a9f4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\": \"An avocado chair\",\r\n    \"size\": \"512x512\",\r\n    \"n\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/images/generations:submit?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"images",
+								"generations:submit"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Result Dall-E 2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "ea048376d7cf4267b0b0ad415d81a9f4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{resource_name}}.openai.azure.com/openai/operations/images/{{operation_id}}?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource_name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"operations",
+								"images",
+								"{{operation_id}}"
+							],
+							"query": [
+								{
+									"key": "operation-location",
+									"value": "8c14ac8e-4b2d-4c62-b8ff-b18a58288271",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete from Server Dall-E 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{resource-name}}.openai.azure.com/openai/operations/images/{{operation_id}}?api-version={{api_version}}",
+							"protocol": "https",
+							"host": [
+								"{{resource-name}}",
+								"openai",
+								"azure",
+								"com"
+							],
+							"path": [
+								"openai",
+								"operations",
+								"images",
+								"{{operation_id}}"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "{{api_version}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
